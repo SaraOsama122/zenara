@@ -264,3 +264,20 @@ footer {
     margin: 12px 0 0;
   }
 }
+.btn i {
+  margin-inline-end: 8px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.btn.wa-only {
+  background-color: #25D366;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 999px;
+}
+
+.btn.wa-only i {
+  margin: 0;
+  font-size: 2em;
+}
