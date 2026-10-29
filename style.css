@@ -266,7 +266,7 @@ footer {
 }
 
 
-
+/* زر قائمة الموبايل */
 .menu-btn {
   display: none;
   background: none;
@@ -340,14 +340,52 @@ footer {
     margin: 0;
     padding: 12px 0;
   }
-  
 }
+
+
+
+nav a {
+  transition: color .25s ease;
+}
+
+.btn {
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 26px var(--glow);
+}
+
+.btn:active {
+  transform: translateY(0) scale(.98);
+}
+
+.btn.alt:hover {
+  background: var(--hacc);
+  color: #1C1030;
+}
+
+.btn.wa-only:hover {
+  box-shadow: 0 10px 26px rgba(37, 211, 102, .5);
+}
+
 .reveal.show {
-  transition: transform .3s ease, box-shadow .3s ease, opacity .7s ease;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 
 .card:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow: 0 16px 36px var(--line);
   border-color: var(--accent);
+}
+
+
+.shot img {
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.shot img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 90px var(--glow), 0 24px 56px rgba(0, 0, 0, .5);
 }
