@@ -17,7 +17,10 @@
     <div class="wrap">
       <header>
         <div class="logo">ZENARA</div>
-        <nav>
+        <button class="menu-btn" aria-label="القائمة" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="nav">
           <a href="#notes">النفحات</a>
           <a href="#why">لماذا زينارا</a>
           <a href="#order">اطلب الآن</a>
@@ -106,6 +109,33 @@
   </section>
 
   <footer>© Zenara · صفحة هبوط تجريبية (Concept)</footer>
+
+  <script>
+    const btn = document.querySelector('.menu-btn');
+    const nav = document.getElementById('nav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    nav.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', false);
+      })
+    );
+
+    const els = document.querySelectorAll('.card, .facts div, .quote, .cta');
+    els.forEach(e => e.classList.add('reveal'));
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(x => {
+        if (x.isIntersecting) {
+          x.target.classList.add('show');
+          io.unobserve(x.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(e => io.observe(e));
+  </script>
 
 </body>
 
