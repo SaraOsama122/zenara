@@ -29,7 +29,6 @@
   box-sizing: border-box;
 }
 
-/* نزول ناعم بين الأقسام */
 html {
   scroll-behavior: smooth;
 }
@@ -330,6 +329,20 @@ footer {
     border-radius: 16px;
     padding: 8px 20px;
     text-align: start;
+      nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    inset-inline: 0;
+    z-index: 10;
+    flex-direction: column;
+    background: var(--hbg);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 8px 20px;
+    text-align: start;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .5);
+  }
   }
 
   nav.open {
