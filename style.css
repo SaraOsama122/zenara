@@ -340,4 +340,14 @@ footer {
     margin: 0;
     padding: 12px 0;
   }
+  
+}
+.reveal.show {
+  transition: transform .3s ease, box-shadow .3s ease, opacity .7s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 16px 36px var(--line);
+  border-color: var(--accent);
 }
